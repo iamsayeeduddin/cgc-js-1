@@ -12,6 +12,7 @@ class ModernMobile extends Mobile {
       throw new Error("value must be true");
       //   console.log("value must be true");
     }
+    console.log("I am it");
   }
 
   call() {

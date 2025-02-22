@@ -8,11 +8,12 @@ var mobile1 = {
 };
 
 var mobile = Object.create(mobile1, {
-  brand: { value: "Apple", enumerable: true, writable: true },
+  brand: { value: "Apple", enumerable: true, writable: true, configurable: false },
 });
 
 Object.defineProperty(mobile, "brand", {
   value: "Samsung",
+  enumerable: false,
 });
 
 Object.defineProperty(mobile, "model", {

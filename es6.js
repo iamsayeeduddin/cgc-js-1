@@ -131,7 +131,7 @@ const callBackFn = (acc, val) => {
 };
 
 const stdCount = stdList.reduce(callBackFn, 0);
-console.log(stdCount);
+// console.log(stdCount);
 
 let obbbbbb = {
   a: 3,
@@ -139,3 +139,13 @@ let obbbbbb = {
   c: 3,
   d: 1,
 };
+
+const res = arrrr.reduce((acc, val) => {
+  if (!acc[val]) {
+    acc[val] = 1;
+  } else {
+    acc[val] += 1;
+  }
+  return acc;
+}, {});
+console.log(res);

@@ -20,7 +20,7 @@
 // var b = 1;
 //   return a + b;
 // };
-// const add = () => 1 + 1;
+// const add = a => a + 1;
 // console.log(add());
 
 // Hoisting
@@ -74,5 +74,68 @@ let a = {
 // let d = { ...a };
 let d = structuredClone(a);
 d.name = "Syed";
-console.log(d, a, d.obj === a.obj);
+// console.log(d, a, d.obj === a.obj);
 // console.log(a, b, c);
+const arr = [1, 2, 3, 4, 5, 6];
+const arr1 = [...arr, 1, 2, 3];
+// console.log(arr1);
+
+const obj = {
+  name: "syed",
+};
+
+const obj1 = {
+  ...obj,
+  name: "Umair",
+};
+
+// console.log(obj1);
+
+const add = (a = 1, b = 0, ...d) => {
+  console.log(d);
+  let c = a + b;
+  if (d.length > 0) {
+    d.forEach((ele) => (c += ele));
+  }
+  return c;
+};
+
+// console.log(add(undefined, 10, 5, 6, 7, -8));
+const str = "piece of Cadbury choco!";
+// console.log(str.endsWith("o!", 5));
+
+// MAP, FILTER and REDUCE
+
+// const res = arr.map((val, idx) => val * 2);
+const stdList = [
+  { name: "Sayeed", status: "PASS", amount: 100 },
+  { name: "Amer", status: "PASS", amount: 23 },
+  { name: "Waheed", status: "FAIL", amount: 8743 },
+  { name: "Salman", status: "FAIL", amount: 25 },
+  { name: "Sufiyaan", status: "PASS", amount: 50 },
+  { name: "Ahmed", status: "ONHOLD", amount: 100 },
+];
+// const res = arr.map((val, idx) => val % 2 === 0);
+// const passedStd = stdList.filter((val) => val.status !== "PASS");
+// console.log(passedStd);
+
+const arrrr = ["a", "a", "a", "b", "b", "c", "c", "c", "d"];
+const callBackFn = (acc, val) => {
+  // if (acc[val.status]) {
+  //   acc[val.status] += 1;
+  // } else {
+  //   acc[val.status] = 1;
+  // }
+  acc += val.amount;
+  return acc;
+};
+
+const stdCount = stdList.reduce(callBackFn, 0);
+console.log(stdCount);
+
+let obbbbbb = {
+  a: 3,
+  b: 2,
+  c: 3,
+  d: 1,
+};

@@ -14,3 +14,5 @@ module.exports = exposeObj;
 //     minVal: minVal,
 //   };
 // console.log(module);
+
+("1,00,000");

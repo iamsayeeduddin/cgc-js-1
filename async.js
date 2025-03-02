@@ -42,10 +42,25 @@ let callBackFn = (result, type) => {
 };
 
 // const res = add(10, 20);
-// add(10, 20, callBackFn);
-// subtract(10, 20, callBackFn);
+add(10, 20, callBackFn);
+subtract(10, 20, callBackFn);
 // console.log(res);
 
+// CALLBACK HELL
 add(10, 50, (result) => {
-  subtract(result, 20, callBackFn);
+  subtract(result, 20, (result) => {
+    subtract(result, 20, (result) => {
+      subtract(result, 20, (result) => {
+        subtract(result, 20, (result) => {
+          subtract(result, 20, (result) => {
+            subtract(result, 20, (result) => {
+              subtract(result, 20, (result) => {
+                subtract(result, 20, callBackFn);
+              });
+            });
+          });
+        });
+      });
+    });
+  });
 });

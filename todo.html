@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .completed {
+        text-decoration: line-through;
+        background: #8fd29f;
+      }
+
+      .delete-btn {
+        background: red;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 2px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Todo List</h2>
+      <div class="input-box">
+        <input type="text" id="taskInput" placeholder="Input Task..." />
+        <button onclick="addTask()">Add</button>
+      </div>
+      <ul id="taskList"></ul>
+    </div>
+    <script src="todo.js"></script>
+  </body>
+</html>

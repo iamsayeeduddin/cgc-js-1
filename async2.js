@@ -49,6 +49,8 @@ const init = async () => {
     console.log(addRes, subRes, mulRes);
   } catch (err) {
     console.log(err);
+  } finally {
+    console.log("FINALLLAYY!!");
   }
 };
 

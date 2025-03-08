@@ -1,8 +1,11 @@
 function greet() {
   let name = "Sayeed";
   function displayName() {
+    let a = "10";
+
     console.log(`Hi ${name}!`);
   }
+  console.log(a);
   //   displayName();
   return displayName;
 }
